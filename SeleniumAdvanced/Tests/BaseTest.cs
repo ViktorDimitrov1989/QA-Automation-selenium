@@ -1,6 +1,9 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Remote;
+using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 
@@ -14,7 +17,19 @@ namespace SeleniumAdvanced.Tests
         [OneTimeSetUp]
         public void InitializeTest()
         {
-            Driver = new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
+            var sauceOptions = new Dictionary<string, object>();
+
+            ChromeOptions options = new ChromeOptions();
+            options.PlatformName = "windows";
+            options.BrowserVersion = "77.0";
+            
+            Driver = new RemoteWebDriver(
+                new Uri("http://172.21.64.1:6069/wd/hub"),
+                options.ToCapabilities(),
+                TimeSpan.FromSeconds(10)
+                );
+
+            Driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(30);
             Driver.Manage().Window.Maximize();
         }
 
