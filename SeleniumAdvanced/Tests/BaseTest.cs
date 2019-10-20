@@ -1,12 +1,8 @@
 ﻿using NUnit.Framework;
-using NUnit.Framework.Interfaces;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
-using System.Text;
 
 namespace SeleniumAdvanced.Tests
 {
@@ -47,7 +43,5 @@ namespace SeleniumAdvanced.Tests
             }
 
         }*/
-
-
     }
 }

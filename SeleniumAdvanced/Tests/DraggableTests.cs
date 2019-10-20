@@ -1,14 +1,5 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Interactions;
-using OpenQA.Selenium.Support.UI;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Reflection;
-using System.Text;
-using SeleniumAdvanced.Factories;
 using SeleniumAdvanced.Pages.Draggable;
 using SeleniumAdvanced.Tests;
 

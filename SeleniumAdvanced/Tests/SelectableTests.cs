@@ -1,15 +1,8 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Interactions;
-using OpenQA.Selenium.Support.UI;
 using SeleniumAdvanced.Pages.Selectable;
 using SeleniumAdvanced.Tests;
-using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Reflection;
-using System.Text;
 
 namespace SeleniumAdvanced
 {
